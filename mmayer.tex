@@ -1,0 +1,218 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.6.2, 28 Aug 2021) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{BlueStyle}{HTML}{3973AC}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{BlueStyle}
+\colorlet{heading}{BlueStyle}
+\colorlet{headingrule}{BlueStyle}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{BlueStyle}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Michael Balzer}
+\tagline{Solutions Engineer \& Proud Geek}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{1624468977526}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{balzermw@gmail.com}
+%   \phone{000-00-0000}
+  \location{Sacramento, CA}
+  \linkedin{michael-balzer}
+  \github{balzermw} 
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Enterprise Solutions Engineer}{VMware}{May 2021 - Present}{Palo Alto, CA}
+\begin{itemize}
+\item Run discovery workshops to identify business outcomes, IT strategy and challenges from C-Level to administrators across IT and other Lines of Business.
+\item Generate comprehensive future state architecture presentations to the C-suite
+\item Technically representing the solution to the customer’s Enterprise architecture team as necessary.
+\end{itemize}
+
+\divider
+
+\cvevent{Solutions Engineer}{Ayehu}{June 2020 -- May 2021}{San Francisco, CA}
+\begin{itemize}
+\item  Function as an automation evangelist by providing custom technical solutions to match unique business needs.
+\item Present Ayehu’s value via live webinars and Q/A.
+\item Prepare SOW documents alongside sales team and guide prospects through entire sales funnel- Discovery to Closed.
+\end{itemize}
+
+\divider
+
+\cvevent{Sales Engineer}{KeepTruckin}{November 2019 --  June 2020}{San Francisco, CA}
+\begin{itemize}
+\item  Acting as a technical product expert for the sales team in the form of technical demonstrations, solution architecture and proof of concepts for a SAAS product.
+\item Work alongside PM and engineering team to provide feedback on IOT device and AI camera product improvements.
+\item Develop and present training materials to equip sales team with differentiated product information.
+\end{itemize}
+\divider
+
+\cvevent{Customer Support Engineer}{Samsara}{December 2017 -- June 2020}{San Francisco, CA}
+
+\begin{itemize}
+\item Supported Samsara's enterprise customer base through Hypergrowth-- growing from 500 to 15,000 customers.
+\item  Kickstarted Samsara's customer knowledge base by drafting and editing technical articles.
+\item Utilize GraphQL, Python, REST API & basic shell commands to health check critical accounts \& troubleshoot Samsara hardware.
+\end{itemize}
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Life Philosophy}
+\begin{quote}
+``Learn by doing''
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faTrophy}{Courage I had}{to move into Solution Engineering from a support role.}
+
+\divider
+
+\cvachievement{\faCircle}{Tenacity}{To continue the lifelong journey of learning throughout my career.}
+
+\divider
+
+\cvachievement{\faChartLine}{Samsara's Growth}{Being able to participate and experience the excitement of hyper-growth.}
+
+\divider
+
+\cvachievement{\faUsers}{Inspiring SEs}{Through SE organizations like PSC, mentoring and building a more diverse world of presale professionals.}
+
+\cvsection{Strengths}
+
+\cvtag{Goal Oriented}
+\cvtag{Tenacious}\\
+\cvtag{Independent}
+
+\divider\smallskip
+
+\cvtag{IT Technology}
+\cvtag{SAAS Solution Selling}
+\cvtag{Executive Alignment}
+
+\cvsection{Education}
+
+
+\cvevent{B.S.\ in Geographic Information Systems}{California State University Sacramento}{Sept 2014 -- June 2016}{}
+
+
+\end{paracol}
+
+\end{document}
